@@ -273,9 +273,9 @@ console.log(selectedObjects(data));
 function specialId(data){
   let objects = [];
   data.filter(function(obj){
-    // if(obj._id === item){
-    objects.push(obj._id);
-  })
+    if(obj._id.includes('e3') === true || obj._id.includes('35') === true) {
+    objects.push(obj);
+  }})
   return objects;
 }
 console.log(specialId(data));
@@ -318,10 +318,3 @@ console.log(averageFemaleAge(data));
 
 // What is that?
 // https://www.json-generator.com/
-
-
-
-
-
-
-
