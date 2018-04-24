@@ -265,20 +265,21 @@ function selectedObjects(data){
   return objects;
 }
 
-console.log(selectedObjects(data));
+console.log('objects which contain "e3": ', selectedObjects(data));
 
 // 2 build a function input is data and output is an array with objects with an id which contains any one of the following strings from this array ['e3', '78','35']
 // output >> [{},{}]
 
 function specialId(data){
-  let objects = [];
-  data.filter(function(obj){
-    if(obj._id.includes('e3') === true || obj._id.includes('35') === true) {
-    objects.push(obj);
-  }})
-  return objects;
+  const arr = ['e3', '35'];
+  return data.filter(function(obj){
+    const match = arr.find(function(item){
+      return obj._id.includes(item);
+    })
+    return match !== undefined;
+  })
 }
-console.log(specialId(data));
+console.log('Search for e3 or 35: ', specialId(data));
 
 // 3 build a function input is data output average age of all people
 function averageAge(data){
@@ -287,7 +288,7 @@ function averageAge(data){
   },0)/data.length;
 }
 
-console.log(averageAge(data));
+console.log('average age of all people: ', averageAge(data));
 
 // 4 build function input is data output is average age of all females
 // https://medium.freecodecamp.org/reduce-f47a7da511a9
@@ -306,7 +307,7 @@ function averageFemaleAge(data){
   },0)/count;
   
 }
-console.log(averageFemaleAge(data));
+console.log('average age of all females: ', averageFemaleAge(data));
 
 
 // higher order functions to use
