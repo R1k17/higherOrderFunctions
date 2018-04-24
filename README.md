@@ -1,0 +1,4 @@
+# higherOrderFunctions
+- .map()
+- .filter()
+- .reduce()
