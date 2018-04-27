@@ -308,14 +308,3 @@ function averageFemaleAge(data){
   
 }
 console.log('average age of all females: ', averageFemaleAge(data));
-
-
-// higher order functions to use
-// .filter() .reduce() .map()
-  // >   .filter() >> erstellt neues array mit Elementen, die den Test bestanden haben
-  // >   .map()    >>
-  // >   .reduce() >>
-
-
-// What is that?
-// https://www.json-generator.com/
